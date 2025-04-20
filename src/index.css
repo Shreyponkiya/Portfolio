@@ -1,0 +1,59 @@
+@import "tailwindcss";
+/* Additional custom styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Typing effect animation for hero section */
+.typing-effect {
+  position: relative;
+}
+
+.typing-effect::after {
+  content: "|";
+  position: absolute;
+  right: -8px;
+  width: 8px;
+  animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ScrollSpy active link styles */
+.nav-link.active {
+  color: #2dd4bf; /* teal-400 color */
+}
+
+/* Skill bar animation */
+.skill-bar {
+  width: 0;
+  animation: skillFill 1.5s ease-in-out forwards;
+}
+
+@keyframes skillFill {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+/* Project card hover effect */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Contact form input focus effect */
+.form-input:focus {
+  border-color: #2dd4bf;
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
